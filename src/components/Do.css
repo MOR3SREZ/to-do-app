@@ -1,0 +1,33 @@
+.works-todo{
+width: auto;
+    
+
+}
+.works{
+    margin-top: 1rem;
+    background-color: #fff;
+    width: 500px;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.works-btn{
+    margin-left: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100px;
+    height: 100%;
+}
+.works-btn button{
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: #DFD8CA;
+    border: 1px solid #fff;
+    margin: 0px 1px;
+}
+.works-btn button:hover{
+    border: 1px solid #DFD8CA;
+}

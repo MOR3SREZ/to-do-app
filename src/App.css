@@ -4,3 +4,55 @@
   box-sizing: 0;
   font-family: 'Fuzzy Bubbles', cursive;
 }
+.App{
+  width: 100%;
+  height: 100vh;
+  background-color: #FBF3E4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.todo-app{
+  background-color: #fff;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  margin-top: 10rem;
+  align-items: center;
+  flex-direction: column;
+}
+.todo-app h1{
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.todo-input{
+  width: auto;
+  margin: 0rem auto 1rem;
+
+}
+.todo-input input{
+  padding: 10px;
+  width: 350px;
+  border:2px solid #DFD8CA;
+}
+.todo-input input:focus{
+  outline: 1px solid #DFD8CA;
+}
+
+.todo-input button{
+  padding: 10px;
+  background-color: #105652;
+  border: none;
+  cursor: pointer;
+  color: #DFD8CA;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.todo-input button:hover{
+  outline: 1px solid #105652;
+}
