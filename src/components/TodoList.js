@@ -2,24 +2,7 @@ import { useState } from 'react';
 
 import './TodoList.css';
 
-const TodoList = () => {
-  const [todoList, setTodoList] = useState([]);
-
-  const romoveHandler = (id) => {
-    const removedArr = [...todoList].filter((e) => e.id !== id);
-    setTodoList(removedArr);
-  };
-  const completeHandler = (id) => {
-    let updatedTodos = [...todoList].map((todo) => {
-      if (todo.id === id) {
-        todo.completeHandler = !todo.completeHandler;
-      }
-      return todo;
-    });
-
-    setTodoList(updatedTodos);
-  };
-
+const TodoList = ({ completeHandler, removeHandler, todoList }) => {
   return (
     <div className='works-todo'>
       {todoList.map((e) => (
@@ -34,7 +17,7 @@ const TodoList = () => {
             </button>
             <button
               className='not-done-btn'
-              onClick={() => romoveHandler(e.id)}
+              onClick={() => removeHandler(e.id)}
             >
               ❌
             </button>

@@ -1,31 +1,6 @@
-import { useState } from 'react';
 import './Todo.css';
 
-const Todo = (props) => {
-  const [input, setInputs] = useState('');
-
-  const changeHandler = (e) => {
-    setInputs(e.target.value);
-  };
-
-  let id = null;
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    id = Math.floor(Math.random() * 10000);
-    const obj = {
-      id: id,
-      text: input,
-    };
-    if (!obj.text || /^\s*$/.test(obj.text)) {
-      return;
-    } else {
-      todoList.push(obj);
-      setTodoList([...todoList]);
-    }
-
-    setInputs('');
-  };
+const Todo = ({ submitHandler, changeHandler, input }) => {
   return (
     <div className='todo-app'>
       <h1>ToDo App</h1>
